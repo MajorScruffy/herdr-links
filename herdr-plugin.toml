@@ -1,0 +1,20 @@
+id = "herdr-links"
+name = "Session Links"
+version = "0.1.0"
+min_herdr_version = "0.9.0"
+description = "Small panel above an agent pane that lists the links from the agent's current chat session"
+platforms = ["macos", "linux"]
+
+[[actions]]
+id = "toggle"
+title = "Links: Toggle panel"
+description = "Open or close the links panel above the focused agent pane"
+contexts = ["workspace"]
+command = ["/bin/sh", "./run.sh", "toggle"]
+
+[[panes]]
+id = "panel"
+title = "Links"
+description = "Links from the target pane's agent session"
+placement = "split"
+command = ["/bin/sh", "./run.sh", "panel"]
